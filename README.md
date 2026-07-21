@@ -1,1 +1,1 @@
-# cloud-security-with-Azure-Microsoft-Entra-ID
+# Azure-Microsoft-Entra-ID Security and Access Management Project
