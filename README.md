@@ -1,1 +1,1 @@
-# Azure-Microsoft-Entra-ID Security and Access Management Project
+# Azure Microsoft Entra-ID Security and Access Management Project
