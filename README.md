@@ -54,9 +54,94 @@ The main objectives of this project are:
 | Azure CLI          | Azure management         |
 | GitHub             | Source code management   |
 
+---  
+
+
+## 📁 Project Structure
+
+```text
+azure-entra-id-security/
+│
+├── terraform/
+│   ├── providers.tf
+│   ├── variables.tf
+│   ├── main.tf
+│   ├── entra.tf
+│   ├── rbac.tf
+│   └── outputs.tf
+│
+├── scripts/
+│   └── login-test.sh
+│
+├── .gitignore
+└── README.md
+```
+
 ---
 
 
+# 🧪 Security Testing
+
+## Test 1 — Developer Access
+
+Login as the developer.
+
+Expected:
+
+```text
+Developer
+    ↓
+Azure-Demo-Developers
+    ↓
+Storage Blob Data Contributor
+    ↓
+Storage Account
+    ↓
+ACCESS ALLOWED
+```
+
+---
+
+## Test 2 — Reader Access
+
+Login as the reader.
+
+Expected:
+
+```text
+Reader
+    ↓
+Azure-Demo-Readers
+    ↓
+Reader
+    ↓
+Storage Account
+    ↓
+READ ACCESS
+```
+
+The reader should not have contributor permissions.
+
+---
+
+## Test 3 — Unauthorized User
+
+A user who is not a member of either group should not receive the permissions granted by these assignments.
+
+```text
+User
+ │
+ ▼
+No Assigned Role
+ │
+ ▼
+Storage Resource
+ │
+ ▼
+ACCESS DENIED
+```
+
+---
 
 # 👨‍💻 Author
 
