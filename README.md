@@ -8,6 +8,7 @@ The project uses **Terraform** to provision an Azure Storage Account and configu
 
 ## 🏗️ Architecture 
 
+![Architecture](architecture.png)
 
 ---
 
