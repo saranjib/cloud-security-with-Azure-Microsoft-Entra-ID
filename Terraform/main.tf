@@ -15,9 +15,4 @@ resource "azurerm_storage_account" "entra-storage-acc" {
   min_tls_version           = "TLS1_2"
 
   public_network_access_enabled = true
-
-  tags = {
-    project     = "entra-id-security"
-    environment = "demo"
-  }
 }
